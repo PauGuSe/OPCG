@@ -1,0 +1,5 @@
+{
+  "name": "Portal de Análisis SIG - Modernización",
+  "description": "Una aplicación interactiva para visualizar los resultados de la encuesta de modernización de la Oficina de Planificación y Control de Gestión, incluyendo gráficos estadísticos y análisis detallado por pregunta.",
+  "requestFramePermissions": []
+}
