@@ -10,9 +10,15 @@ const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<'home' | 'dashboard'>('home');
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
 
-  const filteredQuestions = useMemo(() => {
-    if (selectedCategory === 'Todos') return questions;
-    return questions.filter(q => q.category === selectedCategory);
+  // Ordenación natural de preguntas para asegurar el orden P1, P2, ..., P10, P11
+  const sortedAndFilteredQuestions = useMemo(() => {
+    const filtered = selectedCategory === 'Todos' 
+      ? questions 
+      : questions.filter(q => q.category === selectedCategory);
+    
+    return [...filtered].sort((a, b) => {
+      return a.id.localeCompare(b.id, undefined, { numeric: true, sensitivity: 'base' });
+    });
   }, [selectedCategory]);
 
   return (
@@ -28,46 +34,58 @@ const App: React.FC = () => {
           />
         )}
 
-        <main className="flex-1 overflow-y-auto p-6 md:p-10">
-          {currentView === 'home' ? (
-            <Home onStart={() => setCurrentView('dashboard')} stats={statsSummary} />
-          ) : (
-            <div className="max-w-6xl mx-auto space-y-8 animate-fade-in">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                  <h1 className="text-3xl font-bold text-slate-800">Visualización de Resultados</h1>
-                  <p className="text-slate-500 mt-1">
-                    Mostrando {filteredQuestions.length} indicadores en la categoría: <span className="font-semibold">{selectedCategory}</span>
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-slate-200 shadow-sm text-sm">
-                  <span className="text-slate-500">Muestra Total:</span>
-                  <span className="font-bold text-blue-600">46 Funcionarios</span>
-                </div>
+        <main className="flex-1 overflow-y-auto p-6 md:p-10 bg-slate-50">
+          <div id="report-content">
+            {/* Encabezado exclusivo para el PDF */}
+            <div className="print-header mb-10 text-center border-b-4 border-blue-600 pb-6">
+              <h1 className="text-4xl font-black text-blue-700">Anexo 1: Análisis Diagnóstico</h1>
+              <h2 className="text-2xl font-bold text-slate-600 mt-2">Reporte Completo de Resultados Modernización 2025</h2>
+              <div className="flex justify-between items-end mt-8">
+                <p className="text-slate-500 font-medium">Oficina de Planificación y Control de Gestión (OPCG)</p>
+                <p className="text-xs text-slate-400">Fecha de emisión: {new Date().toLocaleDateString()}</p>
               </div>
-
-              <div className="grid grid-cols-1 gap-12 pb-20">
-                {filteredQuestions.map((q, idx) => (
-                  <ChartCard key={q.id} question={q} index={idx + 1} />
-                ))}
-              </div>
-              
-              {filteredQuestions.length === 0 && (
-                <div className="text-center py-20">
-                  <div className="text-slate-300 text-6xl mb-4">
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                  </div>
-                  <h3 className="text-xl font-medium text-slate-600">No hay indicadores en esta categoría</h3>
-                  <button 
-                    onClick={() => setSelectedCategory('Todos')}
-                    className="mt-4 text-blue-600 hover:underline"
-                  >
-                    Ver todos los resultados
-                  </button>
-                </div>
-              )}
             </div>
-          )}
+
+            {currentView === 'home' ? (
+              <Home onStart={() => setCurrentView('dashboard')} stats={statsSummary} />
+            ) : (
+              <div className="max-w-6xl mx-auto space-y-8 animate-fade-in">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 no-print">
+                  <div>
+                    <h1 className="text-3xl font-bold text-slate-800">Visualización de Resultados</h1>
+                    <p className="text-slate-500 mt-1">
+                      Mostrando {sortedAndFilteredQuestions.length} indicadores en orden secuencial
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-slate-200 shadow-sm text-sm">
+                    <span className="text-slate-500">Categoría:</span>
+                    <span className="font-bold text-blue-600">{selectedCategory}</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-12 pb-20">
+                  {sortedAndFilteredQuestions.map((q, idx) => (
+                    <ChartCard key={q.id} question={q} index={idx + 1} />
+                  ))}
+                </div>
+                
+                {sortedAndFilteredQuestions.length === 0 && (
+                  <div className="text-center py-20 no-print">
+                    <div className="text-slate-300 text-6xl mb-4">
+                      <i className="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3 className="text-xl font-medium text-slate-600">No hay indicadores en esta categoría</h3>
+                    <button 
+                      onClick={() => setSelectedCategory('Todos')}
+                      className="mt-4 text-blue-600 hover:underline"
+                    >
+                      Ver todos los resultados
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         </main>
       </div>
     </div>
