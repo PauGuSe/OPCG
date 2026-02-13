@@ -6,10 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Análisis SIG</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+
+        /* Estilos para el PDF generado */
+        .pdf-mode {
+            padding: 20px !important;
+            background: white !important;
+        }
+        
+        .pdf-mode .bg-white {
+            box-shadow: none !important;
+            border: 1px solid #e2e8f0 !important;
+            page-break-inside: avoid !important;
+            margin-bottom: 30px !important;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            main { overflow: visible !important; height: auto !important; }
+            .print-header { display: block !important; }
+        }
+
+        .print-header { display: none; }
     </style>
 <script type="importmap">
 {
@@ -25,6 +53,6 @@
 </head>
 <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
-<script type="module" src="/src/main.tsx"></script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
