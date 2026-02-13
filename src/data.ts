@@ -57,19 +57,18 @@ export const questions: QuestionData[] = [
   },
   {
     id: "P3",
-    title: "Antigüedad en el Cargo",
-    description: "Experiencia temporal de los funcionarios.",
-    category: "Interacción y Uso",
+    title: "P3 Representación",
+    description: "Distribución por unidades organizacionales y territoriales.",
+    category: "Gobernanza",
     type: ChartType.BAR,
     data: [
-      { name: "Más de 5 años", value: 15 },
-      { name: "2 a 5 años", value: 18 },
-      { name: "1 a 2 años", value: 8 },
-      { name: "Menos de 1 año", value: 5 }
+      { name: "Divisiones", value: 9 },
+      { name: "Oficinas", value: 4 },
+      { name: "Seremias (Regionales)", value: 16 }
     ],
     analysis: [
-      "Núcleo de funcionarios con alta experiencia (70% con más de 2 años).",
-      "La curva de aprendizaje del SIG ya debería estar superada para la mayoría."
+      "Las Seremías Regionales constituyen el bloque más representativo del diagnóstico con 16 unidades participantes.",
+      "El nivel central aporta la visión estratégica de 9 Divisiones y 4 Oficinas institucionales."
     ]
   },
   {
@@ -91,98 +90,95 @@ export const questions: QuestionData[] = [
   },
   {
     id: "P5",
-    title: "Frecuencia de acceso semanal",
-    description: "Veces que el usuario ingresa en una semana típica.",
+    title: "Uso de la plataforma",
+    description: "Propósito principal de la interacción con el sistema.",
     category: "Interacción y Uso",
     type: ChartType.BAR,
     data: [
-      { name: "Diario", value: 4 },
-      { name: "2-3 veces", value: 12 },
-      { name: "Una vez", value: 20 },
-      { name: "Rara vez", value: 10 }
+      { name: "Solo carga de datos", value: 25 },
+      { name: "Carga, rev. de datos", value: 6 },
+      { name: "Toma de decisiones", value: 4 },
+      { name: "Nada", value: 4 },
+      { name: "Solo revisión de datos", value: 2 },
+      { name: "Carga y avances", value: 1 },
+      { name: "Solo informa avances", value: 1 },
+      { name: "Rev. y decisiones", value: 1 },
+      { name: "Rev, carga y decisiones", value: 1 },
+      { name: "Carga, rev. y reportes", value: 1 }
     ],
     analysis: [
-      "El acceso es mayoritariamente puntual, coincidiendo con hitos de reporte.",
-      "La plataforma no es una herramienta de consulta cotidiana aún."
+      "Más de la mitad declara que su uso principal se concentra en la carga de datos. La plataforma es percibida como un 'lugar donde ingresar información', más que como una herramienta de análisis.",
+      "Uso moderado para seguimiento (revisión de datos): Un 22% reporta un uso que incluye revisión de datos, indicando un grupo que monitorea el avance real.",
+      "Uso muy bajo para análisis e informes (6%) y decisiones (5%): El SIG no está siendo percibido como herramienta de inteligencia de gestión, sino como obligación administrativa.",
+      "Un 16% de los usuarios se concentra en categorías de 'Otras' o 'Nada'."
     ]
   },
   {
     id: "P6",
-    title: "Dispositivos de acceso",
-    description: "Equipos utilizados para acceder a la plataforma.",
-    category: "Interacción y Uso",
+    title: "P7/8 Perfiles presentes (respuestas)",
+    description: "Distribución de roles y privilegios en el sistema según las respuestas obtenidas.",
+    category: "Gobernanza",
     type: ChartType.PIE,
     data: [
-      { name: "Computador Institucional", value: 42 },
-      { name: "Computador Personal", value: 4 }
+      { name: "Administradores", value: 2 },
+      { name: "Usuarios/as", value: 44 }
     ],
     analysis: [
-      "El acceso es casi exclusivamente institucional, reforzando la seguridad.",
-      "Se sugiere habilitar accesos seguros desde otros entornos si es necesario."
-    ]
-  },
-  {
-    id: "P7",
-    title: "Horario preferente de uso",
-    description: "Franja horaria con mayor actividad.",
-    category: "Interacción y Uso",
-    type: ChartType.BAR,
-    data: [
-      { name: "Mañana (8-12)", value: 25 },
-      { name: "Tarde (14-18)", value: 18 },
-      { name: "Fuera de horario", value: 3 }
-    ],
-    analysis: [
-      "La mayor carga se realiza durante la mañana.",
-      "Buen balance de vida laboral y cumplimiento de plazos."
+      "Sólo 2 funcionarios tienen perfil Administrador, facultados para cargas masivas y gestión global, todo esto a través de excel.",
+      "Del 96% que respondieron este formulario, opera bajo el perfil 'Usuario'.",
+      "Administradores de Plataforma: Renzo Delmiglio y Paulina Gutiérrez (OPCG)."
     ]
   },
   {
     id: "P8",
-    title: "Módulos más utilizados",
-    description: "Secciones del sistema con mayor flujo.",
-    category: "Interacción y Uso",
-    type: ChartType.BAR,
+    title: "Responsables de cargas másivas Institucionales",
+    description: "Personal y equipos involucrados en el ingreso de información estratégica.",
+    category: "Gobernanza",
+    type: ChartType.PIE,
     data: [
-      { name: "Planificación", value: 30 },
-      { name: "Control de Gestión", value: 22 },
-      { name: "Reportes", value: 15 }
+      { name: "Encargados de carga masiva", value: 2 },
+      { name: "Equipos de trabajo", value: 63 }
     ],
     analysis: [
-      "El módulo de Planificación es el corazón del sistema para los usuarios.",
-      "Control de Gestión muestra un uso secundario pero relevante."
+      "Son 2 encargados institucionales para el ingreso de toda la información institucional, indicadores y proyectos de la Subsecretaría.",
+      "Estos profesionales son parte de la OPCG, unidad que administra integralmente esta plataforma.",
+      "Se identifican 63 equipos de trabajo que sustentan la generación y reporte de datos para el sistema."
     ]
   },
   {
     id: "P9",
-    title: "Satisfacción con la Interfaz",
-    description: "Percepción visual y de navegación.",
-    category: "Usabilidad",
-    type: ChartType.PIE,
+    title: "Tiempo aprox. de carga másiva",
+    description: "Evaluación del tiempo dedicado por administradores para procesar información masiva.",
+    category: "Eficiencia",
+    type: ChartType.BAR,
     data: [
-      { name: "Satisfecho", value: 15 },
-      { name: "Neutral", value: 20 },
-      { name: "Insatisfecho", value: 11 }
+      { name: "Menos de 1 día", value: 0 },
+      { name: "Menos de 2 semanas", value: 0 },
+      { name: "Más de 1 mes", value: 2 },
+      { name: "Otros", value: 0 }
     ],
     analysis: [
-      "La mayoría se mantiene en una posición neutral.",
-      "Existe un espacio de mejora en la experiencia de usuario (UX)."
+      "Este indicador considera exclusivamente a los 2 funcionarios con perfil 'ADMIN' facultados para esta función.",
+      "El proceso de carga masiva se extiende por más de un mes debido a la complejidad de la limpieza de datos en Excel y las validaciones técnicas requeridas.",
+      "Refleja un cuello de botella crítico en la actualización oportuna de la información institucional."
     ]
   },
   {
     id: "P10",
-    title: "Claridad de las instrucciones",
-    description: "Comprensión de los manuales y guías de carga.",
-    category: "Usabilidad",
+    title: "Genera errores o rechazos la plataforma",
+    description: "Frecuencia de fallos técnicos experimentados por el perfil administrador.",
+    category: "Eficiencia",
     type: ChartType.BAR,
     data: [
-      { name: "Muy Claro", value: 10 },
-      { name: "Claro", value: 22 },
-      { name: "Poco Claro", value: 14 }
+      { name: "Frecuentemente", value: 2 },
+      { name: "Ocasionalmente", value: 0 },
+      { name: "rara vez", value: 0 },
+      { name: "Nunca", value: 0 }
     ],
     analysis: [
-      "Nivel de claridad aceptable (70%), pero hay un 30% con dificultades.",
-      "Necesidad de actualizar manuales y simplificar el lenguaje técnico."
+      "El 100% de los administradores (2 funcionarios) reporta que la plataforma genera errores de forma frecuente.",
+      "Estos fallos impactan directamente en los procesos críticos de carga masiva y consolidación de datos.",
+      "Representa una de las principales fricciones técnicas identificadas en el diagnóstico del perfil experto."
     ]
   },
   {
@@ -197,8 +193,8 @@ export const questions: QuestionData[] = [
       { name: "Lento", value: 8 }
     ],
     analysis: [
-      "El rendimiento es aceptable para la mayoría de los usuarios.",
-      "Los picos de carga coinciden con cierres de reporte."
+      "El rendimiento es aceptable para la mayoría de los usuarios en condiciones normales.",
+      "Los problemas de lentitud suelen coincidir con cierres de reporte masivos."
     ]
   },
   {
@@ -213,8 +209,8 @@ export const questions: QuestionData[] = [
       { name: "Parcialmente", value: 8 }
     ],
     analysis: [
-      "Menos de la mitad (46%) visualiza dashboards de forma completa.",
-      "El 37% gestiona 'a ciegas' o con planillas paralelas."
+      "Menos de la mitad (46%) utiliza dashboards de forma completa para su gestión.",
+      "El 37% gestiona 'a ciegas' respecto al sistema, apoyándose en planillas paralelas."
     ]
   },
   {
@@ -230,8 +226,8 @@ export const questions: QuestionData[] = [
       { name: "Más de 1 semana", value: 2 }
     ],
     analysis: [
-      "La mayoría (61%) carga datos en menos de un día.",
-      "La carga no es una tarea desbordante, pero sí manual."
+      "La mayoría (61%) logra cargar sus datos en menos de una jornada laboral.",
+      "La carga no es percibida como una tarea desbordante en tiempo, aunque sí en complejidad manual."
     ]
   },
   {
@@ -245,8 +241,8 @@ export const questions: QuestionData[] = [
       { name: "Sí", value: 20 }
     ],
     analysis: [
-      "Un 43% siente una brecha clara: mejores visualizaciones ayudarían.",
-      "El 57% usa herramientas propias externas."
+      "Un 43% siente una brecha clara: mejores visualizaciones impactarían directamente en la calidad de sus decisiones.",
+      "El 57% declara haber resuelto esta carencia mediante herramientas externas."
     ]
   },
   {
@@ -260,8 +256,8 @@ export const questions: QuestionData[] = [
       { name: "Sí", value: 5 }
     ],
     analysis: [
-      "Baja cultura de 'solicitar asistencia'.",
-      "Existe una demanda latente que no llega al equipo técnico."
+      "Existe una baja cultura de 'solicitar asistencia técnica' para análisis de datos.",
+      "La demanda por mejores dashboards es latente pero no se formaliza como requerimiento de soporte."
     ]
   },
   {
@@ -276,14 +272,14 @@ export const questions: QuestionData[] = [
       { name: "Teléfono", value: 6 }
     ],
     analysis: [
-      "El correo sigue siendo el estándar institucional.",
-      "Creciente interés por el soporte en tiempo real vía chat."
+      "El correo institucional sigue siendo el canal estándar de soporte.",
+      "Se observa un interés creciente por la inmediatez del soporte vía Teams."
     ]
   },
   {
     id: "P17",
     title: "Disponibilidad deseada de plataforma",
-    description: "Preferencia de acceso temporal.",
+    description: "Preferencia de acceso temporal al sistema.",
     category: "Gobernanza",
     type: ChartType.BAR,
     data: [
@@ -292,14 +288,14 @@ export const questions: QuestionData[] = [
       { name: "No aplica", value: 3 }
     ],
     analysis: [
-      "2 de cada 3 encargados quieren la plataforma siempre abierta.",
-      "El modelo de 'ventanas' se percibe como limitante."
+      "67% de los encargados prefiere que la plataforma esté abierta de forma continua.",
+      "El esquema actual de 'ventanas de carga' se percibe como una barrera para el flujo de trabajo."
     ]
   },
   {
     id: "P18",
     title: "Frecuencia ideal para revisiones",
-    description: "Periodicidad óptima para seguimiento.",
+    description: "Periodicidad óptima percibida para el seguimiento.",
     category: "Visualización",
     type: ChartType.BAR,
     data: [
@@ -309,14 +305,14 @@ export const questions: QuestionData[] = [
       { name: "A petición", value: 5 }
     ],
     analysis: [
-      "La mayoría prefiere un control mensual o semanal.",
-      "Alineación con los ciclos de gestión institucional."
+      "La mayoría prefiere ciclos de control mensuales (50%) o semanales (28%).",
+      "Existe alineación con los ritmos de reporte institucional vigentes."
     ]
   },
   {
     id: "P19",
     title: "¿Aporta valor real a tu trabajo?",
-    description: "Evaluación de la utilidad percibida.",
+    description: "Evaluación de la utilidad subjetiva percibida.",
     category: "Impacto",
     type: ChartType.PIE,
     data: [
@@ -325,14 +321,14 @@ export const questions: QuestionData[] = [
       { name: "No", value: 7 }
     ],
     analysis: [
-      "El 85% reconoce algún nivel de valor en la plataforma.",
-      "Solo el 41% siente que ese valor es real y suficiente."
+      "El 85% de los funcionarios reconoce algún nivel de valor en la herramienta.",
+      "Solo el 41% siente que este valor es significativo y directamente aplicable a sus funciones."
     ]
   },
   {
     id: "P20",
     title: "¿Se usa lo que cargas para decisiones?",
-    description: "Percepción de la trazabilidad hacia directivos.",
+    description: "Percepción de la utilidad estratégica de la información cargada.",
     category: "Impacto",
     type: ChartType.BAR,
     data: [
@@ -342,14 +338,14 @@ export const questions: QuestionData[] = [
       { name: "No sé", value: 5 }
     ],
     analysis: [
-      "71.8% percibe uso al menos algunas veces.",
-      "Brecha de 'línea de vista' entre lo operativo y estratégico."
+      "72% percibe que su trabajo de carga tiene algún impacto en la toma de decisiones.",
+      "Persiste una brecha de visibilidad sobre cómo se utiliza la información en niveles directivos."
     ]
   },
   {
     id: "P21",
     title: "¿Hay duplicación de esfuerzos?",
-    description: "Evaluación de la eficiencia en los procesos.",
+    description: "Evaluación de la eficiencia procedimental.",
     category: "Eficiencia",
     type: ChartType.PIE,
     data: [
@@ -357,31 +353,31 @@ export const questions: QuestionData[] = [
       { name: "No", value: 23 }
     ],
     analysis: [
-      "La mitad siente que repite trabajo (Excel + SIG).",
-      "Percepción de ineficiencia por procesos no integrados."
+      "Exactamente el 50% de los usuarios siente que duplica tareas (Excel + Sistema).",
+      "Existe un fuerte incentivo para integrar procesos y eliminar dobles ingresos."
     ]
   },
   {
     id: "P22",
     title: "Casos reportados de problemas",
-    description: "Categorización de fricciones.",
+    description: "Categorización de fricciones operativas.",
     category: "Soporte",
     type: ChartType.BAR,
     data: [
-      { name: "No problemas", value: 19 },
+      { name: "Sin problemas", value: 19 },
       { name: "Usabilidad", value: 12 },
       { name: "Verificación", value: 9 },
       { name: "Accesos", value: 6 }
     ],
     analysis: [
-      "Los problemas se concentran en usabilidad.",
-      "Dificultad específica en la carga de medios de verificación."
+      "La principal fuente de fricción es la usabilidad de la interfaz.",
+      "La carga de medios de verificación se identifica como un proceso especialmente crítico."
     ]
   },
   {
     id: "P23",
     title: "¿SIG es adecuado para seguimiento?",
-    description: "Idoneidad del sistema para monitorización.",
+    description: "Idoneidad del sistema para la monitorización de gestión.",
     category: "Impacto",
     type: ChartType.PIE,
     data: [
@@ -391,8 +387,8 @@ export const questions: QuestionData[] = [
       { name: "Nada", value: 5 }
     ],
     analysis: [
-      "76% reconoce que es al menos parcialmente adecuado.",
-      "Solo 1 de cada 3 lo considera plenamente adecuado."
+      "76% considera que el sistema cumple, al menos en parte, con los objetivos de seguimiento.",
+      "La oportunidad de modernización radica en mover a ese 76% hacia una satisfacción total."
     ]
   }
 ];
