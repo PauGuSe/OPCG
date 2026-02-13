@@ -16,8 +16,8 @@ const Home: React.FC<HomeProps> = ({ onStart, stats }) => {
           Reporte Diagnóstico 2025
         </div>
         <h1 className="text-5xl md:text-6xl font-black text-slate-900 leading-tight">
-          Anexo 1: <span className="text-blue-600">Levantamiento de Modernización</span>
-          <span className="block text-2xl md:text-3xl text-slate-400 mt-2 font-bold italic">- Formulario Microsoft -</span>
+          Anexo 1: <span className="text-blue-600">Análisis Diagnóstico</span>
+          <span className="block text-2xl md:text-3xl text-slate-400 mt-2 font-bold italic">- Formulario -</span>
         </h1>
         <p className="text-lg text-slate-500 leading-relaxed">
           Análisis detallado de las respuestas al formulario de Microsoft sobre la modernización de la Oficina de Planificación y Control de Gestión.
