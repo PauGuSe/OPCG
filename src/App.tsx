@@ -65,7 +65,17 @@ const App: React.FC = () => {
 
                 <div className="grid grid-cols-1 gap-12 pb-20">
                   {sortedAndFilteredQuestions.map((q, idx) => (
-                    <ChartCard key={q.id} question={q} index={idx + 1} />
+                    <React.Fragment key={q.id}>
+                      {q.id === 'P6' && (
+                        <div className="flex items-center gap-3 p-5 bg-white border border-slate-200 rounded-xl shadow-sm border-l-4 border-l-red-400">
+                          <div className="w-6 h-6 bg-red-500/10 border border-red-200 rounded flex-shrink-0"></div>
+                          <p className="text-slate-700 font-semibold text-sm">
+                            Desde la pregunta 6 hasta la 11 las respuestas fueron proporcionadas por los ADMIN de plataforma
+                          </p>
+                        </div>
+                      )}
+                      <ChartCard question={q} index={idx + 1} />
+                    </React.Fragment>
                   ))}
                 </div>
                 
