@@ -7,7 +7,8 @@ export interface ChartDataPoint {
 
 export enum ChartType {
   BAR = 'bar',
-  PIE = 'pie'
+  PIE = 'pie',
+  CUSTOM = 'custom'
 }
 
 export interface QuestionData {
