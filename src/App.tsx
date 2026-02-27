@@ -58,8 +58,21 @@ const App: React.FC = () => {
                     </p>
                   </div>
                   <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-slate-200 shadow-sm text-sm">
-                    <span className="text-slate-500">Categoría:</span>
-                    <span className="font-bold text-blue-600">{selectedCategory}</span>
+                    <span className="text-slate-500 whitespace-nowrap">Categoría:</span>
+                    <div className="relative flex items-center">
+                      <select 
+                        id="category-select"
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                        className="lg:hidden font-bold text-blue-600 bg-transparent border-none p-0 pr-5 focus:ring-0 cursor-pointer appearance-none"
+                      >
+                        {categories.map(cat => (
+                          <option key={cat} value={cat}>{cat}</option>
+                        ))}
+                      </select>
+                      <span className="hidden lg:block font-bold text-blue-600">{selectedCategory}</span>
+                      <i className="fa-solid fa-chevron-down absolute right-0 top-1/2 -translate-y-1/2 text-[10px] text-blue-400 lg:hidden pointer-events-none"></i>
+                    </div>
                   </div>
                 </div>
 
