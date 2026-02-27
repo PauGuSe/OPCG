@@ -183,18 +183,14 @@ export const questions: QuestionData[] = [
   },
   {
     id: "P11",
-    title: "Velocidad de carga del sistema",
-    description: "Rendimiento técnico percibido.",
+    title: "Dificultades del proceso",
+    description: "Principales fricciones identificadas en la gestión de datos.",
     category: "Usabilidad",
-    type: ChartType.PIE,
-    data: [
-      { name: "Rápido", value: 12 },
-      { name: "Aceptable", value: 26 },
-      { name: "Lento", value: 8 }
-    ],
+    type: ChartType.CUSTOM,
+    data: [],
     analysis: [
-      "El rendimiento es aceptable para la mayoría de los usuarios en condiciones normales.",
-      "Los problemas de lentitud suelen coincidir con cierres de reporte masivos."
+      "Se identifica una desconexión entre la estructura de la matriz de carga y las necesidades específicas del servicio.",
+      "La carga manual y la complejidad de la metodología actual generan una barrera significativa para los encargados."
     ]
   },
   {
@@ -232,8 +228,8 @@ export const questions: QuestionData[] = [
   },
   {
     id: "P14",
-    title: "¿Falta de visualización limita decisiones?",
-    description: "Percepción de la limitación por carencia de BI.",
+    title: "¿Falta de visualización limita el análisis o decisiones?",
+    description: "Percepción de la limitación por carencia de visualización",
     category: "Visualización",
     type: ChartType.PIE,
     data: [
@@ -241,8 +237,8 @@ export const questions: QuestionData[] = [
       { name: "Sí", value: 20 }
     ],
     analysis: [
-      "Un 43% siente una brecha clara: mejores visualizaciones impactarían directamente en la calidad de sus decisiones.",
-      "El 57% declara haber resuelto esta carencia mediante herramientas externas."
+      "Un 43% (Sí) siente una brecha clara: mejores visualizaciones impactarían directamente en la calidad de sus análisis y decisiones.",
+      "El 57% (No) declara que la falta de visualización gráfica no limita su análisis o toma de decisiones."
     ]
   },
   {
@@ -262,18 +258,19 @@ export const questions: QuestionData[] = [
   },
   {
     id: "P16",
-    title: "Canal de soporte preferido",
-    description: "Vías de comunicación para resolver dudas.",
-    category: "Soporte",
-    type: ChartType.BAR,
+    title: "Tipos de Visualización utiles (texto libre)",
+    description: "Categorización de requerimientos de visualización según respuestas abiertas.",
+    category: "Visualización",
+    type: ChartType.PIE,
     data: [
-      { name: "Correo", value: 30 },
-      { name: "Teams/Chat", value: 10 },
-      { name: "Teléfono", value: 6 }
+      { name: "Dashboard de cumplimiento", value: 70, percentage: "70%" },
+      { name: "Dashboard comparativo e integrado", value: 15, percentage: "15%" },
+      { name: "Dashboard analítico", value: 15, percentage: "15%" }
     ],
     analysis: [
-      "El correo institucional sigue siendo el canal estándar de soporte.",
-      "Se observa un interés creciente por la inmediatez del soporte vía Teams."
+      "El 70% de los usuarios prioriza dashboards de cumplimiento enfocados en porcentajes de avance, estado de indicadores y detección de atrasos.",
+      "Un 15% requiere herramientas comparativas e históricas (Regional vs Nacional, Divisiones) para priorización y política.",
+      "El 15% restante busca análisis avanzados que integren presupuesto, licitaciones y cruce de variables estratégicas."
     ]
   },
   {
@@ -295,7 +292,7 @@ export const questions: QuestionData[] = [
   {
     id: "P18",
     title: "Frecuencia ideal para revisiones",
-    description: "Periodicidad óptima percibida para el seguimiento.",
+    description: "Periodicidad óptima para revisar datos y visualizar tableros",
     category: "Visualización",
     type: ChartType.BAR,
     data: [
@@ -389,6 +386,102 @@ export const questions: QuestionData[] = [
     analysis: [
       "76% considera que el sistema cumple, al menos en parte, con los objetivos de seguimiento.",
       "La oportunidad de modernización radica en mover a ese 76% hacia una satisfacción total."
+    ]
+  },
+  {
+    id: "P24",
+    title: "Principales Frustraciones (texto abierto)",
+    description: "Identificación de puntos de dolor recurrentes en la experiencia del usuario.",
+    category: "Usabilidad",
+    type: ChartType.CUSTOM,
+    data: [],
+    analysis: [
+      "La carga manual y la falta de reportes automáticos son las frustraciones más citadas.",
+      "La percepción de una plataforma 'antigua' genera resistencia en usuarios que buscan agilidad.",
+      "Existen brechas críticas en la visibilidad del estado de la información y la retroalimentación del sistema."
+    ]
+  },
+  {
+    id: "P25",
+    title: "Funcionalidades urgentes de implementar (texto abierto)",
+    description: "Prioridades de desarrollo y mejora desde la perspectiva del usuario final.",
+    category: "Impacto",
+    type: ChartType.CUSTOM,
+    data: [],
+    analysis: [
+      "La demanda principal se centra en transformar el SIG de un repositorio pasivo a una herramienta de gestión activa con alertas y reportes.",
+      "La simplificación de la interfaz y la integración con flujos existentes son críticas para reducir la duplicidad de trabajo con Excel.",
+      "Garantizar el acceso continuo y homogéneo para todos los roles de apoyo es una deuda técnica pendiente."
+    ]
+  },
+  {
+    id: "P26",
+    title: "Funcionalidades que mejorarían el proceso de reporte (selección múltiple)",
+    description: "Identificación de herramientas clave para optimizar la gestión de información.",
+    category: "Eficiencia",
+    type: ChartType.BAR,
+    data: [
+      { name: "Generación de reportes", value: 29, percentage: "63%" },
+      { name: "Acceso permanente", value: 26, percentage: "56.5%" },
+      { name: "Dashboards y visualización", value: 25, percentage: "54.3%" },
+      { name: "Revisión de cumplimientos", value: 25, percentage: "54.3%" },
+      { name: "Carga de datos", value: 23, percentage: "50%" },
+      { name: "Comunicación en plataforma", value: 13, percentage: "28.3%" },
+      { name: "Menos trabajo manual", value: 8, percentage: "17.4%" },
+      { name: "Otras", value: 4, percentage: "8.7%" }
+    ],
+    analysis: [
+      "La generación automática de reportes es la funcionalidad más demandada (63%), evidenciando la necesidad de salidas de datos útiles.",
+      "Más de la mitad de los usuarios (56.5%) considera crítico tener acceso permanente a la plataforma sin cierres de ciclos.",
+      "La visualización mediante dashboards y la revisión ágil de medios de verificación (MVs) empatan con un 54.3% de interés."
+    ]
+  },
+  {
+    id: "P27",
+    title: "¿Crees que se debería mantenerse SIG (Sistema integrado de gestión)?",
+    description: "Opinión sobre la continuidad y evolución del sistema actual.",
+    category: "Impacto",
+    type: ChartType.PIE,
+    data: [
+      { name: "Mejorar SIG/Modernizar", value: 70, percentage: "70%" },
+      { name: "Otras respuestas", value: 14, percentage: "14%" },
+      { name: "Mantener sin cambios", value: 9, percentage: "9%" },
+      { name: "Buscar otras plataformas", value: 7, percentage: "7%" }
+    ],
+    analysis: [
+      "Existe un consenso abrumador (70%) a favor de mantener el SIG pero bajo un proceso profundo de modernización y mejora.",
+      "Solo un 9% de los usuarios considera que el sistema debe mantenerse tal como está, lo que valida la urgencia del cambio.",
+      "Un pequeño porcentaje (7%) sugiere explorar alternativas externas, mientras que el resto aporta visiones diversas sobre la transición."
+    ]
+  },
+  {
+    id: "P28",
+    title: "Otras herramientas que conoces que podrían ser opción",
+    description: "Conocimiento de alternativas tecnológicas y propuestas de los usuarios.",
+    category: "Impacto",
+    type: ChartType.CUSTOM,
+    data: [
+      { name: "No conozco ninguna", value: 34 },
+      { name: "Propone plataforma", value: 10 },
+      { name: "Sólo conozco SIG", value: 2 }
+    ],
+    analysis: [
+      "La mayoría de los usuarios (74%) no identifica alternativas al SIG, lo que indica una alta dependencia del sistema institucional.",
+      "Un 22% de los encuestados propone activamente herramientas de mercado, destacando soluciones de BI y ERPs consolidados.",
+      "Existe una tendencia a sugerir herramientas de colaboración (Office 365) para cubrir brechas de comunicación y seguimiento."
+    ]
+  },
+  {
+    id: "P29",
+    title: "Comentarios o propuestas (texto abierto)",
+    description: "Recopilación de sugerencias finales y visiones estratégicas de los usuarios.",
+    category: "Impacto",
+    type: ChartType.CUSTOM,
+    data: [],
+    analysis: [
+      "Existe una alta disposición al cambio y reconocimiento al esfuerzo del nivel central, lo que facilita la implementación de mejoras.",
+      "Se identifica un potencial subutilizado del SIG para la gestión estratégica más allá del cumplimiento normativo (CDC/PMG).",
+      "La interoperabilidad y la reducción de procesos paralelos en Excel son las demandas estructurales más recurrentes."
     ]
   }
 ];
