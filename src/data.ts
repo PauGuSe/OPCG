@@ -47,8 +47,8 @@ export const questions: QuestionData[] = [
     category: "Gobernanza",
     type: ChartType.BAR,
     data: [
-      { name: "Nivel Central", value: 25 },
-      { name: "Regional", value: 21 }
+      { name: "Nivel Central", value: 25, percentage: "54.3%" },
+      { name: "Regional", value: 21, percentage: "45.7%" }
     ],
     analysis: [
       "Existe un equilibrio estratégico entre el Nivel Central (54%) y las Regiones (46%).",
@@ -62,9 +62,9 @@ export const questions: QuestionData[] = [
     category: "Gobernanza",
     type: ChartType.BAR,
     data: [
-      { name: "Divisiones", value: 9 },
-      { name: "Oficinas", value: 4 },
-      { name: "Seremias (Regionales)", value: 16 }
+      { name: "Divisiones", value: 9, percentage: "19.6%" },
+      { name: "Oficinas", value: 4, percentage: "8.7%" },
+      { name: "Seremias (Regionales)", value: 16, percentage: "34.8%" }
     ],
     analysis: [
       "Las Seremías Regionales constituyen el bloque más representativo del diagnóstico con 16 unidades participantes.",
@@ -95,16 +95,16 @@ export const questions: QuestionData[] = [
     category: "Interacción y Uso",
     type: ChartType.BAR,
     data: [
-      { name: "Solo carga de datos", value: 25 },
-      { name: "Carga, rev. de datos", value: 6 },
-      { name: "Toma de decisiones", value: 4 },
-      { name: "Nada", value: 4 },
-      { name: "Solo revisión de datos", value: 2 },
-      { name: "Carga y avances", value: 1 },
-      { name: "Solo informa avances", value: 1 },
-      { name: "Rev. y decisiones", value: 1 },
-      { name: "Rev, carga y decisiones", value: 1 },
-      { name: "Carga, rev. y reportes", value: 1 }
+      { name: "Solo carga de datos", value: 25, percentage: "54.3%" },
+      { name: "Carga, rev. de datos", value: 6, percentage: "13.0%" },
+      { name: "Toma de decisiones", value: 4, percentage: "8.7%" },
+      { name: "Nada", value: 4, percentage: "8.7%" },
+      { name: "Solo revisión de datos", value: 2, percentage: "4.3%" },
+      { name: "Carga y avances", value: 1, percentage: "2.2%" },
+      { name: "Solo informa avances", value: 1, percentage: "2.2%" },
+      { name: "Rev. y decisiones", value: 1, percentage: "2.2%" },
+      { name: "Rev, carga y decisiones", value: 1, percentage: "2.2%" },
+      { name: "Carga, rev. y reportes", value: 1, percentage: "2.2%" }
     ],
     analysis: [
       "Más de la mitad declara que su uso principal se concentra en la carga de datos. La plataforma es percibida como un 'lugar donde ingresar información', más que como una herramienta de análisis.",
@@ -120,8 +120,8 @@ export const questions: QuestionData[] = [
     category: "Gobernanza",
     type: ChartType.PIE,
     data: [
-      { name: "Administradores", value: 2 },
-      { name: "Usuarios/as", value: 44 }
+      { name: "Administradores", value: 2, percentage: "4.3%" },
+      { name: "Usuarios/as", value: 44, percentage: "95.7%" }
     ],
     analysis: [
       "Sólo 2 funcionarios tienen perfil Administrador, facultados para cargas masivas y gestión global, todo esto a través de excel.",
@@ -136,8 +136,8 @@ export const questions: QuestionData[] = [
     category: "Gobernanza",
     type: ChartType.PIE,
     data: [
-      { name: "Encargados de carga masiva", value: 2 },
-      { name: "Equipos de trabajo", value: 63 }
+      { name: "Encargados de carga masiva", value: 2, percentage: "3.1%" },
+      { name: "Equipos de trabajo", value: 63, percentage: "96.9%" }
     ],
     analysis: [
       "Son 2 encargados institucionales para el ingreso de toda la información institucional, indicadores y proyectos de la Subsecretaría.",
@@ -152,10 +152,10 @@ export const questions: QuestionData[] = [
     category: "Eficiencia",
     type: ChartType.BAR,
     data: [
-      { name: "Menos de 1 día", value: 0 },
-      { name: "Menos de 2 semanas", value: 0 },
-      { name: "Más de 1 mes", value: 2 },
-      { name: "Otros", value: 0 }
+      { name: "Menos de 1 día", value: 0, percentage: "0%" },
+      { name: "Menos de 2 semanas", value: 0, percentage: "0%" },
+      { name: "Más de 1 mes", value: 2, percentage: "100%" },
+      { name: "Otros", value: 0, percentage: "0%" }
     ],
     analysis: [
       "Este indicador considera exclusivamente a los 2 funcionarios con perfil 'ADMIN' facultados para esta función.",
@@ -170,10 +170,10 @@ export const questions: QuestionData[] = [
     category: "Eficiencia",
     type: ChartType.BAR,
     data: [
-      { name: "Frecuentemente", value: 2 },
-      { name: "Ocasionalmente", value: 0 },
-      { name: "rara vez", value: 0 },
-      { name: "Nunca", value: 0 }
+      { name: "Frecuentemente", value: 2, percentage: "100%" },
+      { name: "Ocasionalmente", value: 0, percentage: "0%" },
+      { name: "rara vez", value: 0, percentage: "0%" },
+      { name: "Nunca", value: 0, percentage: "0%" }
     ],
     analysis: [
       "El 100% de los administradores (2 funcionarios) reporta que la plataforma genera errores de forma frecuente.",
@@ -200,9 +200,9 @@ export const questions: QuestionData[] = [
     category: "Visualización",
     type: ChartType.BAR,
     data: [
-      { name: "Sí", value: 21 },
-      { name: "No", value: 17 },
-      { name: "Parcialmente", value: 8 }
+      { name: "Sí", value: 21, percentage: "45.7%" },
+      { name: "No", value: 17, percentage: "37.0%" },
+      { name: "Parcialmente", value: 8, percentage: "17.4%" }
     ],
     analysis: [
       "Menos de la mitad (46%) utiliza dashboards de forma completa para su gestión.",
@@ -216,10 +216,10 @@ export const questions: QuestionData[] = [
     category: "Interacción y Uso",
     type: ChartType.BAR,
     data: [
-      { name: "Menos de 1 día", value: 28 },
-      { name: "Menos de una semana", value: 10 },
-      { name: "No realiza carga", value: 6 },
-      { name: "Más de 1 semana", value: 2 }
+      { name: "Menos de 1 día", value: 28, percentage: "60.9%" },
+      { name: "Menos de una semana", value: 10, percentage: "21.7%" },
+      { name: "No realiza carga", value: 6, percentage: "13.0%" },
+      { name: "Más de 1 semana", value: 2, percentage: "4.3%" }
     ],
     analysis: [
       "La mayoría (61%) logra cargar sus datos en menos de una jornada laboral.",
@@ -233,8 +233,8 @@ export const questions: QuestionData[] = [
     category: "Visualización",
     type: ChartType.PIE,
     data: [
-      { name: "No", value: 26 },
-      { name: "Sí", value: 20 }
+      { name: "No", value: 26, percentage: "56.5%" },
+      { name: "Sí", value: 20, percentage: "43.5%" }
     ],
     analysis: [
       "Un 43% (Sí) siente una brecha clara: mejores visualizaciones impactarían directamente en la calidad de sus análisis y decisiones.",
@@ -248,8 +248,8 @@ export const questions: QuestionData[] = [
     category: "Soporte",
     type: ChartType.PIE,
     data: [
-      { name: "No", value: 41 },
-      { name: "Sí", value: 5 }
+      { name: "No", value: 41, percentage: "89.1%" },
+      { name: "Sí", value: 5, percentage: "10.9%" }
     ],
     analysis: [
       "Existe una baja cultura de 'solicitar asistencia técnica' para análisis de datos.",
@@ -280,9 +280,9 @@ export const questions: QuestionData[] = [
     category: "Gobernanza",
     type: ChartType.BAR,
     data: [
-      { name: "Permanente", value: 31 },
-      { name: "Por períodos", value: 12 },
-      { name: "No aplica", value: 3 }
+      { name: "Permanente", value: 31, percentage: "67.4%" },
+      { name: "Por períodos", value: 12, percentage: "26.1%" },
+      { name: "No aplica", value: 3, percentage: "6.5%" }
     ],
     analysis: [
       "67% de los encargados prefiere que la plataforma esté abierta de forma continua.",
@@ -296,10 +296,10 @@ export const questions: QuestionData[] = [
     category: "Visualización",
     type: ChartType.BAR,
     data: [
-      { name: "Mensualmente", value: 23 },
-      { name: "Semanalmente", value: 13 },
-      { name: "Diariamente", value: 5 },
-      { name: "A petición", value: 5 }
+      { name: "Mensualmente", value: 23, percentage: "50.0%" },
+      { name: "Semanalmente", value: 13, percentage: "28.3%" },
+      { name: "Diariamente", value: 5, percentage: "10.9%" },
+      { name: "A petición", value: 5, percentage: "10.9%" }
     ],
     analysis: [
       "La mayoría prefiere ciclos de control mensuales (50%) o semanales (28%).",
@@ -313,9 +313,9 @@ export const questions: QuestionData[] = [
     category: "Impacto",
     type: ChartType.PIE,
     data: [
-      { name: "Parcialmente", value: 20 },
-      { name: "Sí", value: 19 },
-      { name: "No", value: 7 }
+      { name: "Parcialmente", value: 20, percentage: "43.5%" },
+      { name: "Sí", value: 19, percentage: "41.3%" },
+      { name: "No", value: 7, percentage: "15.2%" }
     ],
     analysis: [
       "El 85% de los funcionarios reconoce algún nivel de valor en la herramienta.",
@@ -329,10 +329,10 @@ export const questions: QuestionData[] = [
     category: "Impacto",
     type: ChartType.BAR,
     data: [
-      { name: "Siempre", value: 17 },
-      { name: "A veces", value: 16 },
-      { name: "Nunca", value: 8 },
-      { name: "No sé", value: 5 }
+      { name: "Siempre", value: 17, percentage: "37.0%" },
+      { name: "A veces", value: 16, percentage: "34.8%" },
+      { name: "Nunca", value: 8, percentage: "17.4%" },
+      { name: "No sé", value: 5, percentage: "10.9%" }
     ],
     analysis: [
       "72% percibe que su trabajo de carga tiene algún impacto en la toma de decisiones.",
@@ -346,8 +346,8 @@ export const questions: QuestionData[] = [
     category: "Eficiencia",
     type: ChartType.PIE,
     data: [
-      { name: "Sí", value: 23 },
-      { name: "No", value: 23 }
+      { name: "Sí", value: 23, percentage: "50.0%" },
+      { name: "No", value: 23, percentage: "50.0%" }
     ],
     analysis: [
       "Exactamente el 50% de los usuarios siente que duplica tareas (Excel + Sistema).",
@@ -361,10 +361,10 @@ export const questions: QuestionData[] = [
     category: "Soporte",
     type: ChartType.BAR,
     data: [
-      { name: "Sin problemas", value: 19 },
-      { name: "Usabilidad", value: 12 },
-      { name: "Verificación", value: 9 },
-      { name: "Accesos", value: 6 }
+      { name: "Sin problemas", value: 19, percentage: "41.3%" },
+      { name: "Usabilidad", value: 12, percentage: "26.1%" },
+      { name: "Verificación", value: 9, percentage: "19.6%" },
+      { name: "Accesos", value: 6, percentage: "13.0%" }
     ],
     analysis: [
       "La principal fuente de fricción es la usabilidad de la interfaz.",
@@ -378,10 +378,10 @@ export const questions: QuestionData[] = [
     category: "Impacto",
     type: ChartType.PIE,
     data: [
-      { name: "Parcialmente", value: 22 },
-      { name: "Totalmente", value: 13 },
-      { name: "Poco", value: 6 },
-      { name: "Nada", value: 5 }
+      { name: "Parcialmente", value: 22, percentage: "47.8%" },
+      { name: "Totalmente", value: 13, percentage: "28.3%" },
+      { name: "Poco", value: 6, percentage: "13.0%" },
+      { name: "Nada", value: 5, percentage: "10.9%" }
     ],
     analysis: [
       "76% considera que el sistema cumple, al menos en parte, con los objetivos de seguimiento.",
@@ -443,10 +443,10 @@ export const questions: QuestionData[] = [
     category: "Impacto",
     type: ChartType.PIE,
     data: [
-      { name: "Mejorar SIG/Modernizar", value: 70, percentage: "70%" },
-      { name: "Otras respuestas", value: 14, percentage: "14%" },
       { name: "Mantener sin cambios", value: 9, percentage: "9%" },
-      { name: "Buscar otras plataformas", value: 7, percentage: "7%" }
+      { name: "Mejorar SIG/Modernizar", value: 70, percentage: "70%" },
+      { name: "Buscar otras plataformas", value: 7, percentage: "7%" },
+      { name: "Otras respuestas", value: 14, percentage: "14%" }
     ],
     analysis: [
       "Existe un consenso abrumador (70%) a favor de mantener el SIG pero bajo un proceso profundo de modernización y mejora.",
@@ -461,9 +461,9 @@ export const questions: QuestionData[] = [
     category: "Impacto",
     type: ChartType.CUSTOM,
     data: [
-      { name: "No conozco ninguna", value: 34 },
-      { name: "Propone plataforma", value: 10 },
-      { name: "Sólo conozco SIG", value: 2 }
+      { name: "No conozco ninguna", value: 34, percentage: "73.9%" },
+      { name: "Propone plataforma", value: 10, percentage: "21.7%" },
+      { name: "Sólo conozco SIG", value: 2, percentage: "4.3%" }
     ],
     analysis: [
       "La mayoría de los usuarios (74%) no identifica alternativas al SIG, lo que indica una alta dependencia del sistema institucional.",
