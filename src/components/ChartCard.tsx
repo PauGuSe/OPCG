@@ -17,10 +17,12 @@ const ChartCard: React.FC<ChartCardProps> = ({ question, index }) => {
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
+      const data = payload[0].payload;
+      const displayValue = data.percentage || `${payload[0].value} Respuestas`;
       return (
         <div className="bg-white p-3 border border-slate-200 shadow-lg rounded-lg text-sm">
           <p className="font-bold text-slate-800">{payload[0].name}</p>
-          <p className="text-blue-600 font-semibold">{payload[0].value} Respuestas</p>
+          <p className="text-blue-600 font-semibold">{displayValue}</p>
         </div>
       );
     }
